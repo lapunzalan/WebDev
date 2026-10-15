@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Activity 1 | Bento Grid Layout</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bento-page">
+
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">ABOUT ME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hobbies-goals.html">HOBBIES &amp; GOALS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="socials-contact.html">SOCIALS &amp; CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="webdev.html">WEB DEVELOPMENT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container bento-page-container py-5">
+        <div class="row g-3">
+
+            <div class="col-12 col-md-4">
+                <div class="bento-card bento-tall">
+                    <img src="assets/images/bento1.jpg" alt="Bento Card 1"
+                        data-bs-toggle="modal" data-bs-target="#bentoModal">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+                <div class="row g-3">
+
+                    <div class="col-12">
+                        <div class="bento-card bento-top">
+                            <img src="assets/images/bento2.jpg" alt="Bento Card 2"
+                                data-bs-toggle="modal" data-bs-target="#bentoModal">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="bento-card bento-top">
+                            <img src="assets/images/bento3.jpg" alt="Bento Card 3"
+                                data-bs-toggle="modal" data-bs-target="#bentoModal">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="bento-card bento-top">
+                            <img src="assets/images/bento4.jpg" alt="Bento Card 4"
+                                data-bs-toggle="modal" data-bs-target="#bentoModal">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+                <div class="bento-card bento-bottom">
+                    <img src="assets/images/bento5.jpg" alt="Bento Card 5"
+                        data-bs-toggle="modal" data-bs-target="#bentoModal">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="bento-card bento-bottom">
+                    <img src="assets/images/bento6.jpg" alt="Bento Card 6"
+                        data-bs-toggle="modal" data-bs-target="#bentoModal">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <div class="modal fade" id="bentoModal" tabindex="-1" aria-labelledby="bentoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bentoModalLabel">Bento Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body text-center">
+                    <img id="bentoModalImage" src="" alt="Enlarged Bento Image" class="img-fluid">
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-activity" data-bs-dismiss="modal">← Back</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer-custom">
+        <div class="footer-left">
+            <img src="assets/images/footer-icon.png" alt="Footer Icon">
+            <div>
+                <p>© 2026 LEA ANN PUNZALAN</p>
+                <p>BSIT STUDENT · DESIGNED WITH FIGMA</p>
+            </div>
+        </div>
+
+        <div class="footer-center">
+            ACTIVITY 1 OF WEB DEVELOPMENT
+        </div>
+
+        <div class="footer-progress">
+            <div class="progress-track">
+                <div class="progress-fill" style="width: 25%;"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        const bentoModal = document.getElementById("bentoModal");
+
+        bentoModal.addEventListener("show.bs.modal", function (event) {
+            const clickedImage = event.relatedTarget;
+            const modalImage = document.getElementById("bentoModalImage");
+            const modalTitle = document.getElementById("bentoModalLabel");
+
+            const imageTitles = {
+                "Bento Card 1": "DDisintegration Effect",
+                "Bento Card 2": "Campus Marketplace",
+                "Bento Card 3": "Pixel Panic",
+                "Bento Card 4": "Calling Card",
+                "Bento Card 5": "My Terraria House",
+                "Bento Card 6": "3d Logo Design"
+            };
+
+            modalImage.src = clickedImage.src;
+            modalImage.alt = clickedImage.alt + " Enlarged";
+            modalTitle.textContent = imageTitles[clickedImage.alt] || "My Gallery";
+        });
+    </script>
+
+</body>
+</html>

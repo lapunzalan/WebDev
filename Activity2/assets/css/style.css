@@ -1,4 +1,3 @@
-/* GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +23,6 @@ a {
     text-decoration: none;
 }
 
-/* NAVBAR */
 .ruby-navbar {
     background-color: #101010;
     padding: 10px 0;
@@ -170,7 +168,6 @@ a {
     letter-spacing: 3px;
 }
 
-/* ALBUM SECTION */
 .album-section {
     padding: 100px 0;
     background-color: #151313;
@@ -270,7 +267,6 @@ a {
     color: white;
 }
 
-/* TRACKLIST SECTION */
 .track-section {
     padding: 100px 0;
     background-color: var(--background);
@@ -295,8 +291,6 @@ a {
     padding-bottom: 10px;
 }
 
-/* SONG CARDS */
-/* SONG CARDS */
 .song-card {
     height: 100%;
     background-color: var(--surface);
@@ -396,7 +390,6 @@ a {
     font-size: 10px;
 }
 
-/* RESPONSIVE DESIGN */
 @media (max-width: 767px) {
     .hero-section {
         min-height: 540px;
@@ -452,7 +445,6 @@ a {
     object-fit: cover;
 }
 
-/* JENNIE PORTRAIT SECTION */
 .portrait-section {
     padding: 100px 0;
     background-color: #191919;

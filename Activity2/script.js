@@ -1,4 +1,3 @@
-// RUBY ALBUM SONG DATA
 var songs = [
     {
         title: "Intro : JANE",
@@ -77,10 +76,8 @@ var songs = [
     }
 ];
 
-// GET THE HTML CONTAINER
 var parent = document.getElementById("song-list");
 
-// GENERATE THE SONG CARDS
 for (var i = 0; i < songs.length; i++) {
 
     parent.innerHTML += `

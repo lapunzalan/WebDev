@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingshot Archives</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>KINGSHOT ARCHIVES</h1>
+        <p>Explore the heroes of Kingshot</p>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="Search hero name...">
+
+            <select id="generationFilter">
+                <option value="">All Generations</option>
+            </select>
+
+            <select id="rarityFilter">
+                <option value="">All Rarities</option>
+            </select>
+
+            <select id="troopFilter">
+                <option value="">All Troop Types</option>
+            </select>
+
+            <select id="sortFilter">
+                <option value="default">Default Order</option>
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="name-desc">Name (Z-A)</option>
+                <option value="generation-asc">Generation (Low-High)</option>
+                <option value="generation-desc">Generation (High-Low)</option>
+            </select>
+
+            <button type="button" id="clearFilters">
+                CLEAR FILTERS
+            </button>
+        </section>
+
+        <!-- HERO COLLECTION -->
+        <section class="hero-section">
+            <h2>Hero Collection</h2>
+
+            <p id="heroCount">Loading heroes...</p>
+
+            <div id="heroContainer" class="hero-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Fan-made Kingshot Archives | Data source: Kingshot Alliance Command</p>
+    </footer>
+
+    <!-- HERO DETAILS MODAL -->
+    <div id="heroModal" class="hero-modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-button">&times;</button>
+
+            <div id="heroDetails"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
